@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask , render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello_world():
-  return "<p>what is ur name?</p> <form action = '/home/runner/swati-sample-1/home.py'> <input type = 'text'>&nbsp; <input type='submit' value='Submit'> </form>"
+  return render_template('home.html')
 
 
 if __name__ == "__main__":
